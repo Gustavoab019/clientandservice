@@ -22,7 +22,7 @@ app.engine(
 app.engine(
   ".hbs",
   create({
-    layoutsDir: path.join(app.get("views"), "jobs"),
+    layoutsDir: path.join(app.get("views"), "layouts"),
     partialsDir: path.join(app.get("views"), "partials"),
     defaulLayout: "main",
     extname: ".hbs",
