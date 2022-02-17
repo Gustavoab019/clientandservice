@@ -1,0 +1,47 @@
+{{#if colabs}}
+  <table class="table table-bordered table-hover table-dark">
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each colabs}}
+        <tr>
+          <td>{{@colabs}}</td>
+          <td><strong>{{name}}</strong></td>
+          <td>{{email}}</td>
+          <td>
+            {{#if done}}
+              <a
+                class="btn btn-success"
+                href="/colabs/{{_id}}/colabsToggle"
+              >Done</a>
+            {{else}}
+              <a class="btn btn-dark" href="/colabs/{{_id}}/colabsToggle">
+                Undone
+              </a>
+            {{/if}}
+            <a href="/colabs/{{_id}}/delete" class="btn btn-danger">
+              Delete
+            </a>
+            <a href="/colabs/{{_id}}/edit" class="btn btn-info">
+              Edit
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+      <h1>No tasks</h1>
+      <img src="/icons/empty.svg" class="w-75" />
+    </div>
+
+  </div>
+{{/if}}

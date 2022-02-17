@@ -1,0 +1,63 @@
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+  <h3>Add A Task</h3>
+  <form action="/tasks/add" method="post">
+
+    {{! Title Input }}
+    <div class="mb-3">
+      <label for="title">Cadastrar Cliente:</label>
+      <input
+        id="title"
+        class="form-control rounded-0 bg-dark text-white"
+        type="text"
+        name="name"
+        placeholder="Digite seu Nome"
+        autofocus
+      />
+    </div>
+
+    {{! Description Input }}
+    <div class="mb-3">
+      <label for="description">Email</label>
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="email"
+        cols="80"
+        placeholder="E-mail"
+      ></textarea>
+    </div>
+
+    {{! Description Input }}
+    <div class="mb-3">
+      <label for="description">Contato</label>
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="contact"
+        cols="80"
+        placeholder="Contato"
+      ></textarea>
+    </div>
+
+    {{! Description Input }}
+    <div class="mb-3">
+      <label for="description">Senha</label>
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="password"
+        cols="80"
+        placeholder="Contato"
+      ></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="description">Localização</label>
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="location"
+        cols="80"
+        placeholder="Contato"
+      ></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Add</button>
+  </form>
+</div>

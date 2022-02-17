@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <!--FORM-->
+    <div class="col-md-5 offset-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h1>Update Colaborador</h1>
+
+          <form action="/colabs/{{colabs._id}}/edit" method="post">
+            <div class="mb-3">
+              <input
+                class="form-control"
+                type="text"
+                name="name"
+                placeholder="Title"
+                value="{{colabs.name}}"
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                name="email"
+                rows="3"
+                placeholder="Add a Description"
+              >{{colabs.email}}</textarea>
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                name="password"
+                rows="3"
+                placeholder="Add a Description"
+              >{{colabs.password}}</textarea>
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                name="contact"
+                rows="3"
+                placeholder="Add a Description"
+              >{{colabs.contact}}</textarea>
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                name="location"
+                rows="3"
+                placeholder="Add a Description"
+              >{{colabs.location}}</textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

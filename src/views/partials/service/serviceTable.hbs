@@ -1,0 +1,47 @@
+{{#if service}}
+  <table class="table table-bordered table-hover table-dark">
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each service}}
+        <tr>
+          <td>{{@service}}</td>
+          <td><strong>{{serviceName}}</strong></td>
+          <td>{{description}}</td>
+          <td>
+            {{#if done}}
+              <a
+                class="btn btn-success"
+                href="/service/{{_id}}/serviceToggle"
+              >Done</a>
+            {{else}}
+              <a class="btn btn-dark" href="/service/{{_id}}/serviceToggle">
+                Undone
+              </a>
+            {{/if}}
+            <a href="/service/{{_id}}/delete" class="btn btn-danger">
+              Delete
+            </a>
+            <a href="/service/{{_id}}/edit" class="btn btn-info">
+              Edit
+            </a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+      <h1>No tasks</h1>
+      <img src="/icons/empty.svg" class="w-75" />
+    </div>
+
+  </div>
+{{/if}}
